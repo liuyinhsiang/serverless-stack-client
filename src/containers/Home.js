@@ -27,10 +27,7 @@ const Home = () => {
     onLoad();
   }, [isAuthenticated]);
 
-  // const loadNotes = () => API.get('notes', '/notes');
-  function loadNotes() {
-    return API.put('notes', '/notes');
-  }
+  const loadNotes = () => API.get('notes', '/notes');
 
   const renderNotesList = (notes) =>
     [{}].concat(notes).map((note, i) =>
