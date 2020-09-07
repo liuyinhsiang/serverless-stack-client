@@ -29,7 +29,7 @@ const Home = () => {
 
   // const loadNotes = () => API.get('notes', '/notes');
   function loadNotes() {
-    return API.get('notes', '/invalid_path');
+    return API.put('notes', '/notes');
   }
 
   const renderNotesList = (notes) =>
