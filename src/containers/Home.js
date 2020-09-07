@@ -27,7 +27,10 @@ const Home = () => {
     onLoad();
   }, [isAuthenticated]);
 
-  const loadNotes = () => API.get('notes', '/notes');
+  // const loadNotes = () => API.get('notes', '/notes');
+  function loadNotes() {
+    return API.get('notes', '/invalid_path');
+  }
 
   const renderNotesList = (notes) =>
     [{}].concat(notes).map((note, i) =>
